@@ -1,6 +1,9 @@
 # evil_ftp
 
-运行上述脚本，一个恶意ftp服务就起来了
+
+本脚本配合CVE-2021-3129 laravel debug rce食用更佳
+
+运行上述脚本，一个恶意ftp服务就起来了(注释已经很详细了）
 
 这个脚本做的事情很简单，就是当客户端第一次连接的时候返回我们预设的payload
 
@@ -12,5 +15,15 @@ https://blog.csdn.net/qq981378640/article/details/51254177
 
 **使用该脚本需要自己修改对应的ip:port**
 
+脚本中的payload是使用的gopherus生成的攻击fastcgi的payload
+
+
+有了上面的ftp server,下面的两行看似无懈可击的代码也就可以被RCE了：
+
 `$a = file_get_contents("ftp://aaa@172.16.230.146:23/123");`
 `file_put_contents("ftp://aaa@172.16.230.146:23/123", $a);`
+
+
+关于laravle debug rce的复现在这里：
+
+https://mp.weixin.qq.com/s/UPf62W0LoOGsFAdH4uqBcQ
