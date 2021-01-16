@@ -15,7 +15,7 @@ https://blog.csdn.net/qq981378640/article/details/51254177
 
 **使用该脚本需要自己修改对应的ip:port**
 
-脚本中的payload是使用的gopherus生成的攻击fastcgi的payload
+脚本中的payload是使用的gopherus生成的攻击fastcgi的payload,使用时也记得自己去生成一份
 
 
 有了上面的ftp server,下面的两行看似无懈可击的代码也就可以被RCE了：
